@@ -6,7 +6,7 @@ define([
 ], function(App, CalendarTemplate, HeaderTemplate, BodyTemplate){
 
 	App.module("CalendarApp.Show", function(Show, App, Backbone, Marionette, $, _){
-		Show.Layout = Marionette.Layout.extend({
+		Show.Layout = Marionette.LayoutView.extend({
 			template: CalendarTemplate,
 			regions: {
 				calendarHead: "#calendar-head",
@@ -31,7 +31,7 @@ define([
 			}
 		});
 
-		Show.Date = Marionette.ItemView.extend({
+		Show.Date = Marionette.childView.extend({
 			tagName: "li data-li",
 			className: "date-li",
 			template: BodyTemplate,

@@ -1,25 +1,23 @@
 require.config({
-	// urlArgs: "bust=" + (new Date()).getTime(), // for development
 	paths: {
-		backbone: "libs/backbone/backbone",
-		marionette: "libs/backbone/backbone.marionette",
-		jquery: "libs/jquery/jquery-2.1.1",
-		underscore: "libs/lodash/lodash",
-		text: "libs/require/text",
-		moment: "libs/utils/moment",
+		backbone: '../bower_components/backbone/backbone',
+		marionette: '../bower_components/marionette/lib/backbone.marionette',
+		jquery: '../bower_components/jquery/dist/jquery',
+		underscore: '../bower_components/lodash/dist/lodash',
+		text: '../bower_components/text/text',
 	},
 	shim: {
 		backbone: {
-			deps: ["jquery", "underscore"],
-			exports: "Backbone"
+			deps: ['jquery', 'underscore'],
+			exports: 'Backbone'
 		},
 		marionette: {
-			deps: ["backbone"],
-			exports: "Marionette"
+			deps: ['backbone'],
+			exports: 'Marionette'
 		}
 	}
 });
 
-require(["app"], function(App){
+	require(['app'], function(App){
 	App.start();
 });
