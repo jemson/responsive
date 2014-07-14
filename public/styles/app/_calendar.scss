@@ -1,7 +1,125 @@
+@media only screen
+and (max-width : 1824px)
+and (min-width : 1225px){
+	.calendar{
+		background-color: #D8D8D8;
+		width: 258px;
+		height:287px;
+		margin-left:-2%;
+
+		p{
+			font-weight: 800;
+			color: #585858;
+			font-family: helvetica;
+			text-align: center;
+			padding: 2px;
+
+		}
+
+		ul {
+
+			display:block;
+			text-align: center;
+			@include clearfix;
+			@include horizontal-list;
+
+			&.indent{
+				margin-left: 30px;
+			}
+
+			li{
+				width: 18px;
+				margin-left: 2px;
+				margin-right: 1px;
+				font-weight: 700;
+				font-size: 12px;
+				color: #585858;
+				font-family: helvetica;
+			}
+
+			&.calendar-dates li {
+				width:20px;
+				height:37px;
+				text-align: center;
+				cursor: pointer;
+				margin-left: 2px;
+				float:left;
+				color: #585858;
+
+				&.date-li p{
+					font-size: 12px;
+					font-family: helvetica;
+					text-align: center;
+				}
+
+				&.visible p{
+
+					background: -webkit-radial-gradient(gray 9%,black 90%);
+					background: -moz-radial-gradient(gray 9%,black 90%);
+					background: -o-radial-gradient(gray 9%,black 90%); 
+					background-size: 18px 18px; 
+					border-radius:50%; 
+					color:white; 
+					font-weight:700;
+
+				}
+
+				&.scale {
+					-webkit-transform: scale(1.1, 1.1) translate(0px, 0px);
+					-webkit-transition: all 0.5s;
+				}
+			}
+		}
+
+		hr{
+			max-width: 95%
+		}
+		
+	}
+	.calendar-head{
+		display:block;
+			@include clearfix;
+		font-size: 14px;
+		font-weight: 800;
+		color: #585858;
+		font-family: helvetica;
+		text-align: center;
+		padding: 15px;
+		.arrow-left {
+			padding-right:20px;
+			cursor:pointer;
+			color: #A4A4A4;
+			&:hover{
+				color:#666666;
+			}
+		}
+		.arrow-right {
+			padding-left:20px;
+			cursor:pointer;
+			color: #A4A4A4;
+			&:hover{
+				color:#666666;
+				font-weight: bold
+			}
+		}
+	}
+	.calendar-body{
+		display:block;
+			@include clearfix;
+		width: 240px;
+		margin-left: 30px;
+	}
+}
+
+@media only screen 
+and (max-width : 1224px)
+and (min-width : 768px){
+  /* Styles */
+
 .calendar{
 	background-color: #D8D8D8;
-	width: 290px;
-	height:1333px;
+	width: 258px;
+	height:287px;
 	margin-left:-2%;
 
 	p{
@@ -67,16 +185,6 @@
 				-webkit-transform: scale(1.1, 1.1) translate(0px, 0px);
 				-webkit-transition: all 0.5s;
 			}
-			
-			&.hidden p{
-			  
-			}
-
-			// p:hover{
-			// background-color: gray; 
-			// color:white;
-			// border-radius: 50%;
-			// }
 		}
 	}
 
@@ -117,4 +225,125 @@
 		@include clearfix;
 	width: 240px;
 	margin-left: 30px;
+}
+}
+
+
+
+
+
+@media only screen 
+and (max-width : 768px) 
+and (min-width : 320px)
+and (orientation : landscape){
+	.calendar{
+		background-color: #D8D8D8;
+		width: 185px;
+		height:170px;
+		margin-left:3%;	
+
+
+		p{
+			font-weight: 800;
+			color: #585858;
+			font-family: helvetica;
+			text-align: center;
+			padding: 2px;
+
+		}
+
+		ul {
+
+			display:block;
+			text-align: center;
+			@include clearfix;
+			@include horizontal-list;
+
+			// margin-left: 15px;
+			&.indent{
+				margin-left: 20px;
+				li{
+					font-size: 6px;
+				}
+
+			}
+
+			li{
+				width: 10px;
+				margin-left: 2px;
+				margin-right: 3px;
+				font-weight: 700;
+				font-size: 12px;
+				color: #585858;
+				font-family: helvetica;
+			}
+
+			&.calendar-dates li {
+				width:10px;
+				height:15px;
+				text-align: center;
+				cursor: pointer;
+				color: #585858;
+
+				&.date-li p{
+					font-size: 6px;
+					font-family: helvetica;
+					text-align: center;
+				}
+
+				&.visible p{
+
+					background: -webkit-radial-gradient(gray 9%,black 90%);
+					background: -moz-radial-gradient(gray 9%,black 90%);
+					background: -o-radial-gradient(gray 9%,black 90%); 
+					background-size: 18px 18px; 
+					border-radius:50%; 
+					color:white; 
+					font-weight:700;
+
+				}
+
+				&.scale {
+					-webkit-transform: scale(1.1, 1.1) translate(0px, 0px);
+					-webkit-transition: all 0.5s;
+				}
+
+			}
+		}
+
+		hr{
+			max-width: 95%
+		}
+		
+	}
+
+	.cursor{
+		padding-right:20px;
+		cursor:pointer;
+		color: #A4A4A4;
+		&:hover{
+			color:#666666;
+		}
+	}
+	.calendar-head{
+			@include clearfix;
+		font-size: 12px;
+		font-weight: 600;
+		color: #585858;
+		font-family: helvetica;
+		text-align: center;
+		padding: 15px;
+		.arrow-left {
+			@extend .cursor
+		}
+		.arrow-right {
+			@extend .cursor
+		}
+	}
+	.calendar-body{
+		display:block;
+			@include clearfix;
+		width: 170px;
+		margin-left: 18px;
+	}
 }

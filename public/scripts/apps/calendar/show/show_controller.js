@@ -70,8 +70,8 @@ define([
 						this.bodyView = this.getDatesView();
 						this.layout.calendarBody.show(this.bodyView);
 
-						this.listenTo(this.bodyView, "itemview:day:click", this.changeSelectedDate);
-						this.listenTo(this.bodyView, "itemview:day:click", this.selectedDate);
+						this.listenTo(this.bodyView, "childview:day:click", this.changeSelectedDate);
+						this.listenTo(this.bodyView, "childview:day:click", this.selectedDate);
 					},
 
 					getMonths: function(){
@@ -138,20 +138,18 @@ define([
 					
 					//change on active day
 					changeSelectedDate: function(iv){
-						console.log("cliked changeSelectedDate");
 						
-						// var oldDate = this.emptyDate.findWhere({isSelected: true});
+						var oldDate = this.emptyDate.findWhere({isSelected: true});
 
-						// if ( oldDate ) {
-						// 	oldDate.set({isSelected: false});
-						// }
-						// iv.model.set({isSelected: true});
+						if ( oldDate ) {
+							oldDate.set({isSelected: false});
+						}
+						iv.model.set({isSelected: true});
 					},
 
 					//date selector					
 					selectedDate: function(iv){
-						console.log("click selectedDate");
-						// this.triggerPickdate(iv);
+						this.triggerPickdate(iv);
 					},
 
 					//attributes by the calendar
