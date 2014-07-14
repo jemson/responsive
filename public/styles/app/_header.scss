@@ -1,0 +1,17 @@
+@import "global";
+
+.header {
+	@include clearfix;
+	background-color: #82ca9c;
+	color: #333333;
+	line-height:55px;	
+	height:55px;
+	padding:0 20px;
+	
+	ul {
+		 @include horizontal-list-container;
+	}
+	img {
+		vertical-align: middle;
+	}
+}
