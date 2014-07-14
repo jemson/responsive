@@ -31,7 +31,7 @@ define([
 			}
 		});
 
-		Show.Date = Marionette.childView.extend({
+		Show.Date = Marionette.ItemView.extend({
 			tagName: "li data-li",
 			className: "date-li",
 			template: BodyTemplate,
@@ -62,7 +62,7 @@ define([
 		});
 
 		Show.Dates = Marionette.CollectionView.extend({
-			itemView: Show.Date,
+			childView: Show.Date,
 			className: "calendar-dates",
 			tagName: "ul"
 		});
