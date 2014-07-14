@@ -37,7 +37,8 @@ define([
 			template: BodyTemplate,
 			events: {
 				"mouseover" : "fadeIn",
-				"mouseout" : "fadeOut"
+				"mouseout" : "fadeOut",
+				// "click" : "changeDate"
 			},
 			triggers: {
 				"click": "day:click"
@@ -47,7 +48,6 @@ define([
 			},
 			templateHelpers: {
 				onSelected: function(){
-					console.log(this);
 					if (this.isSelected === true ) {
 						return "color:white; border-radius:50%; -webkit-transition:all 0.5s; background: -webkit-radial-gradient(gray 9%,black 90%); background: -moz-radial-gradient(gray 9%,black 90%); background: -o-radial-gradient(gray 9%,black 90%); "
 					}
@@ -59,6 +59,9 @@ define([
 			fadeOut:function(){
 				this.$el.removeClass("visible scale");
 			},
+			// changeDate:function(){
+			// 	this.$el.trigger("day:click", this.model);
+			// }
 		});
 
 		Show.Dates = Marionette.CollectionView.extend({

@@ -6,7 +6,7 @@ define([
 
 	App.module("ScheduleApp.List", function(List, App, Backbone, Marionette, $, _){
 
-		List.Layout = Marionette.Layout.extend({
+		List.Layout = Marionette.LayoutView.extend({
 			
 			template: LayoutTemplate,
 			tagName: "main",
@@ -50,7 +50,7 @@ define([
 		});
 		
 		List.ReservationsCollection = Marionette.CollectionView.extend({
-			itemView: List.ReservationsItemView,
+			childView: List.ReservationsItemView,
 		});
 	
 	});

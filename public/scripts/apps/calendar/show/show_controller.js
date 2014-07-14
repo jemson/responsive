@@ -138,18 +138,20 @@ define([
 					
 					//change on active day
 					changeSelectedDate: function(iv){
+						console.log("cliked changeSelectedDate");
 						
-						var oldDate = this.emptyDate.findWhere({isSelected: true});
+						// var oldDate = this.emptyDate.findWhere({isSelected: true});
 
-						if ( oldDate ) {
-							oldDate.set({isSelected: false});
-						}
-						iv.model.set({isSelected: true});
+						// if ( oldDate ) {
+						// 	oldDate.set({isSelected: false});
+						// }
+						// iv.model.set({isSelected: true});
 					},
 
 					//date selector					
 					selectedDate: function(iv){
-						this.triggerPickdate(iv);
+						console.log("click selectedDate");
+						// this.triggerPickdate(iv);
 					},
 
 					//attributes by the calendar

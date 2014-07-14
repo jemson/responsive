@@ -6,7 +6,7 @@ define([
 
 	App.module("ScheduleApp.Show", function(Show, App, Backbone, Marionette, $, _){
 
-		Show.Layout = Marionette.Layout.extend({
+		Show.Layout = Marionette.LayoutView.extend({
 			template: LayoutTemplate,
 			className: "dialog-box",
 			regions:{
