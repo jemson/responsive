@@ -328,8 +328,9 @@ and (max-width : 640px){
 	}
 
 	.sidebar {
-		width:25%;
-		float:right;
+		visibility: hidden;
+		// width:25%;
+		// float:right;
 	}
 
 	.column {
@@ -338,9 +339,9 @@ and (max-width : 640px){
 	}
 
 	.day-module {
-		padding-top:40px;
-		padding-bottom:20px;
-		font-size:14px;
+		padding-top:5px;
+		padding-bottom:0px;
+		font-size:5px;
 		color:#999999;
 		margin:auto;
 		text-align:center;
@@ -359,12 +360,12 @@ and (max-width : 640px){
 		@extend .module;
 
 		.strong {
-			font-size:60px;
+			font-size:14px;
 			text-align:center;
 		}
 
 		.large-number {
-			font-size:16px;
+			font-size:5px;
 			text-align:center;
 
 			&.lighter {
@@ -376,14 +377,14 @@ and (max-width : 640px){
 
 	.next-module {
 		strong {
-			font-size: 16px;
+			font-size: 7px;
 		}
 		.large-number {
-			font-size:13px;
+			font-size:5px;
 			color:#606060;
 		}
 		.reservation {
-			line-height:30px;
+			line-height:5px;
 		}
 
 	 @extend .module;
@@ -400,10 +401,10 @@ and (max-width : 640px){
 		border: 1px solid #ccc;
 		background-color: #81BEF7;
 		border-color: #81BEF7;
-		width:75px;
+		width:52px;
 		font-family: Helvetica;
 		font-weight: 600;
-		font-size:10px;
+		font-size:7px;
 		color: white;
 		float:right;
 	}

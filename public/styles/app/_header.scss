@@ -47,12 +47,15 @@ and (max-width : 640px){
 
 	.header {
 		@include clearfix;
+		img{
+			width: 30px
+		}
 		background-color: #82ca9c;
 		color: #333333;
-		line-height:36px;	
-		height:35px;
-		padding:0 30px;
-		font-size: 12px;
+		line-height:15px;	
+		height:14px;
+		padding:0 4px;
+		font-size: 5px;
 		
 		ul {
 			 @include horizontal-list-container;
